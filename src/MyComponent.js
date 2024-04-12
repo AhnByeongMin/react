@@ -1,7 +1,6 @@
 // =>는  ES6문법
 //defaultProps 지정
-const MyComponent = props => {
-    const {name, children, nick} = props;
+const MyComponent = ({name, children, nick}) => {
   return (
     <>
       <div>
