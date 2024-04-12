@@ -8,11 +8,30 @@ const Say = () => {
 
   const [color, setColor] = useState("black");
 
+  // 객체 다루기
+  const object = { a: 1, b: 2, c: 3 };
+  const nextObjcet = { ...object, b: 4 };
+  console.log({ object });
+  console.log({ nextObjcet });
+
+  // 배열 다루기
+  const array = [
+    { id: 1, value: true },
+    { id: 2, value: true },
+    { id: 3, value: false },
+  ];
+  console.log({ array });
+  let nextArray = array.concat({ id: 1, value: 4 }); // 새항목 추가
+  console.log({ nextArray });
+  nextArray.filter(item => (item.id !== 2)); // id가 2인값 제거
+  console.log(nextArray.filter(item => (item.id !== 2)));
+  nextArray.map(item => (item.id === 1 ? {...item, value : false} : item)); //id가 1항목의  values fasle로 변경
+  console.log(nextArray.map(item => (item.id === 1 ? {...item, value : false} : item)));
   return (
     <div>
       <button onClick={onClickEnter}>입장</button>
       <button onClick={onClickLeave}>퇴장</button>
-      <h1 style={{color}}>{message}</h1>
+      <h1 style={{ color }}>{message}</h1>
       <button style={{ color: "red" }} onClick={() => setColor("red")}>
         빨간색
       </button>
