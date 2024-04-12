@@ -17,12 +17,17 @@ class MyComponent extends Component {
       </>
     );
   }
+  static defaultProps = {
+    name: "기본이름",
+    nick: "리액트",
+  };
 }
 //defaultProps 지정
-MyComponent.defaultProps = {
-  name: "기본이름",
-  nick: "리액트",
-};
+// class 내부에서 static 선얼을 통해 지정하는 방법도 가능
+// MyComponent.defaultProps = {
+//   name: "기본이름",
+//   nick: "리액트",
+// };
 //PropTypes 검증 지정타입이 아닌값에대해 console에 경고가 표시됨
 //PropTypes 가 아닌 prototype
 // eslint-disable-next-line react/no-typos
