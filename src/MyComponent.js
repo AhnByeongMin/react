@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 // =>는  ES6문법
-//defaultProps 지정
+
 const MyComponent = ({name, children, nick}) => {
   return (
     <>
@@ -12,9 +13,15 @@ const MyComponent = ({name, children, nick}) => {
     </>
   );
 };
+//defaultProps 지정
 MyComponent.defaultProps = {
   name: "기본이름",
   nick :"리액트"
 };
+//PropTypes 검증 지정타입이 아닌값에대해 console에 경고가 표시됨
+// eslint-disable-next-line react/no-typos
+MyComponent.PropTypes = {
+    name: PropTypes.string
+}
 
 export default MyComponent;
