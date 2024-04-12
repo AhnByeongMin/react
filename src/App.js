@@ -2,20 +2,9 @@ import './App.css';
 
 function App() {
   const name = '리액트';
-  
+  // 기존에 html 테그 안에서 class 로 css를 적용했던것 대신 className을 통해 적용시킨다.
   return (
-    <div style={{
-      // -가 사라지고 스네티크 표기에서 카멜 표기법으로 바뀜. background-color -> backgroundColor
-      backgroundColor: 'black',
-      color: 'aqua',
-      fontSize: '48px',
-      fontWeight: 'bold',
-      padding: 16 //단위 생략시 px
-    }}>
-      {/*
-      undefined 값을 리턴시 null 포인트 에러가 발생하니까 undefined를 리턴하여 랜더링 하는 일이 없도록 하자.
-      JSX 내부에서는 괜찮다. 값이 undefined일경우에서는 java에서와 같이 널포인트 방지를 해주자.
-      */}
+    <div className='react'>
       {name || '리액트'}
     </div>
   );
