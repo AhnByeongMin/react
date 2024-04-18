@@ -32,6 +32,7 @@ const Say = () => {
       <button onClick={onClickEnter}>입장</button>
       <button onClick={onClickLeave}>퇴장</button>
       <h1 style={{ color }}>{message}</h1>
+      {/* 리엑트에서는 HTML의 onclick 입력시 카멜표기법으로 onClick으로 입력해야한다. */}
       <button style={{ color: "red" }} onClick={() => setColor("red")}>
         빨간색
       </button>
