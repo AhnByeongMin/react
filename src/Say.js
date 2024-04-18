@@ -25,8 +25,8 @@ const Say = () => {
   console.log({ nextArray });
   nextArray.filter(item => (item.id !== 2)); // id가 2인값 제거
   console.log(nextArray.filter(item => (item.id !== 2)));
-  nextArray.map(item => (item.id === 1 ? {...item, value : false} : item)); //id가 1항목의  values fasle로 변경
-  console.log(nextArray.map(item => (item.id === 1 ? {...item, value : false} : item)));
+  nextArray.map(item => (item.id === 1 ? { ...item, value: false } : item)); //id가 1항목의  values fasle로 변경
+  console.log(nextArray.map(item => (item.id === 1 ? { ...item, value: false } : item)));
   return (
     <div>
       <button onClick={onClickEnter}>입장</button>
