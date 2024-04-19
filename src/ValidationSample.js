@@ -21,15 +21,21 @@ class ValidationSample extends Component {
         });
         this.input.focus();
     }
+    handleOnKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            this.handleButtonClick();
+        }
+    }
 
     render() {
         return (
             <div>
                 <input
-                    ref={(ref) => this.input=ref}
+                    ref={(ref) => this.input = ref}
                     type="password"
                     value={this.state.password}
                     onChange={this.handleChange}
+                    onKeyDown={this.handleOnKeyDown}
                     className={this.state.clicked ? (this.state.vaildated ? 'success' : 'failure') : ''}
                 />
                 <button onClick={this.handleButtonClick}>검증하기</button>
